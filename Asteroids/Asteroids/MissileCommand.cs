@@ -16,6 +16,7 @@ namespace Asteroids
     /// </summary>
     public class Asteroids : GameEnvironment
     {
+        public const string playingState = "ps";
 
         public Asteroids()
         {
@@ -34,6 +35,8 @@ namespace Asteroids
             IsMouseVisible = true;
 
             // TODO: use this.Content to load your game content here      
+            gameStateManager.AddGameState(playingState, new PlayingState());
+            gameStateManager.SwitchTo(playingState);
 
         }
 
