@@ -16,7 +16,7 @@ namespace Asteroids
     /// </summary>
     public class Asteroids : GameEnvironment
     {
-        public const string playingState = "ps";
+        public const string playingState = "ps", gameoverState = "gos";
 
         public Asteroids()
         {
@@ -36,6 +36,7 @@ namespace Asteroids
 
             // TODO: use this.Content to load your game content here      
             gameStateManager.AddGameState(playingState, new PlayingState());
+            gameStateManager.AddGameState(gameoverState, new GameOverState());
             gameStateManager.SwitchTo(playingState);
 
         }
