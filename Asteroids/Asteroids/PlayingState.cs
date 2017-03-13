@@ -7,12 +7,14 @@ namespace Asteroids
 {
     class PlayingState : GameObjectList
     {
+        SpaceShip spaceShip;
 
         public PlayingState()
         {
-
+            spaceShip = new SpaceShip();
 
             this.Add(new SpriteGameObject("spr_background"));
+            this.Add(spaceShip);
         }
     }
 }
